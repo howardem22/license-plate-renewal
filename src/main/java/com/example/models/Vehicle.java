@@ -21,26 +21,16 @@ public class Vehicle {
     @Size(min=3, max=15)
     private String model;
 
-    @Size(min=3, max=15)
-    private String trim;
-    /**
     @NotNull
-    private float liter;
+    private String kindOfVehicle;
 
-    private int taxHp;
-
-
-     * vehicle to engine cylinders
-     *@ManyToOne
-     * private Category category;
-    **/
 
     public Vehicle() { }
 
-    public Vehicle(String make, String model, String trim){
+    public Vehicle(String make, String model, String kindOfVehicle){
         this.make = make;
         this.model= model;
-        this.trim= trim;
+        this.kindOfVehicle= kindOfVehicle;
     }
 
     public int getId() {
@@ -64,29 +54,11 @@ public class Vehicle {
     }
 
     public String getTrim() {
-        return trim;
+        return kindOfVehicle;
     }
 
     public void setTrim(String trim) {
-        this.trim = trim;
+        this.kindOfVehicle = trim;
     }
-
-/**
-    public float getLiter() {
-        return liter;
-    }
-
-    public void setLiter(float liter) {
-        this.liter = liter;
-    }
-
-    public int getTaxHp() {
-        return taxHp;
-    }
-
-    public void setTaxHp(int taxHp) {
-        this.taxHp = taxHp;
-    }
- **/
 
 }
