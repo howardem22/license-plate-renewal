@@ -21,6 +21,8 @@ public class VehicleController {
         model.addAttribute("vehicles", vehicleDao.findAll());
         model.addAttribute("title", "All Vehicles");
 
-        return "index";
+        return "vehicle/index";
     }
+
+
 }
